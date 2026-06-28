@@ -1,0 +1,39 @@
+# === Secrets / env ===
+.env
+.env.*
+!.env.example
+/env                     # 旧・空プレースホルダ（追跡解除済み）
+
+# === Drupal（Composer管理／`composer install` で復元） ===
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Drupal サイト固有の秘密・状態（bind-mount, マシン依存）
+/web/sites/*/settings.php
+/web/sites/*/settings.local.php
+/web/sites/*/services.yml
+/web/sites/*/files/
+/web/sites/*/private/
+
+# === DB ボリューム ===
+/mysql/data/
+
+# === Next.js フロント（frontend/.gitignore と二重で安全側） ===
+/frontend/node_modules/
+/frontend/.next/
+/frontend/out/
+/frontend/.env.local
+/frontend/next-env.d.ts
+/frontend/*.tsbuildinfo
+
+# === OS / エディタ ===
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
