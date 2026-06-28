@@ -1,0 +1,183 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --border: #e2e5ea;
+  --text: #1b1f24;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --book: #7c3aed;
+  --article: #0891b2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Hiragino Sans', Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 4px;
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0 0 24px;
+  font-size: 0.92rem;
+}
+
+/* --- フィルタ --- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.field select,
+.field input {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.field input {
+  min-width: 200px;
+}
+
+.reset {
+  font-size: 0.82rem;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 9px 4px;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 16px 2px;
+}
+
+/* --- カード --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #fff;
+  width: fit-content;
+}
+
+.badge.book {
+  background: var(--book);
+}
+.badge.article {
+  background: var(--article);
+}
+
+.card h2 {
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.card .sub {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.card .desc {
+  font-size: 0.85rem;
+  color: #374151;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.72rem;
+  background: #eef2ff;
+  color: #3730a3;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.tag.aud {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.scores {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.82rem;
+}
+
+.scores b {
+  color: var(--accent);
+}
+
+.empty {
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+}

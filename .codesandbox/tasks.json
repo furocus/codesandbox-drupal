@@ -1,13 +1,21 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
-  "setupTasks": [],
+  "setupTasks": [
+    {
+      "name": "Install frontend deps",
+      "command": "cd frontend && npm install"
+    }
+  ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "whereis htop": {
-      "name": "whereis htop",
-      "command": "whereis htop",
-      "runAtStart": true
+    "frontend-dev": {
+      "name": "Next.js dev (frontend)",
+      "command": "cd frontend && npm run dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
     }
   }
 }

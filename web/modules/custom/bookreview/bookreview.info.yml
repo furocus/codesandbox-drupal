@@ -1,0 +1,11 @@
+name: Book Review
+type: module
+description: 'ヘッドレスDrupal技術検証用：本のレビュー&コレクション・コミュニティ（Item/Review モデル、集計・カスタムエンドポイント）。'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:field
+  - drupal:image
+  - drupal:jsonapi
