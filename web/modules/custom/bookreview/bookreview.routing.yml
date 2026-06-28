@@ -1,0 +1,10 @@
+bookreview.item_stats:
+  path: '/api/resource/{node}/stats'
+  defaults:
+    _controller: '\Drupal\bookreview\Controller\StatsController::itemStats'
+  requirements:
+    _entity_access: 'node.view'
+  options:
+    parameters:
+      node:
+        type: entity:node
